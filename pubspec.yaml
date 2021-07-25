@@ -31,6 +31,7 @@ dependencies:
   intl: ^0.17.0
   provider: ^5.0.0
   shrine_images: ^2.0.1
+  transparent_image: ^2.0.0
 
 dev_dependencies:
   flutter_test:

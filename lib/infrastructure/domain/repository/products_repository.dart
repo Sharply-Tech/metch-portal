@@ -1,4 +1,4 @@
-import 'product.dart';
+import '../../../domain/model/product.dart';
 
 class ProductsRepository {
   static const _allProducts = <Product>[

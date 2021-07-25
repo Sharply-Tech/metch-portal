@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
-import 'model/app_state_model.dart';
-import 'model/product.dart';
+import 'domain/model/app_state_model.dart';
+import 'domain/model/product.dart';
+
 import 'styles.dart';
 
 class ProductRowItem extends StatelessWidget {
@@ -48,9 +49,10 @@ class ProductRowItem extends StatelessWidget {
                   semanticLabel: 'Add',
                 ),
                 onPressed: () {
-                final model = Provider.of<AppStateModel>(context, listen: false);
-                model.addProductToCart(product.id);
-            })
+                  final model =
+                      Provider.of<AppStateModel>(context, listen: false);
+                  // model.addProductToCart(product.id);
+                })
           ],
         ));
 
@@ -62,15 +64,8 @@ class ProductRowItem extends StatelessWidget {
       children: <Widget>[
         row,
         Padding(
-          padding: EdgeInsets.only(
-            left: 100,
-            right: 16
-          ),
-          child: Container(
-            height: 1,
-            color: Styles.productRowDivider
-          )
-        )
+            padding: EdgeInsets.only(left: 100, right: 16),
+            child: Container(height: 1, color: Styles.productRowDivider))
       ],
     );
   }
